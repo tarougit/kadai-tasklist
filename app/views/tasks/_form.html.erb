@@ -1,6 +1,6 @@
 <div class="row">
- <div class="col-xs-6">
-  </div><%= form_for(tasks) do |f| %>
+ <div class="col-xs-12 col-sm-offset-2 col-md-offset-2 col-sm-8 col-md-8 col-lg-offset-3 col-lg-6">
+  <%= form_for(tasks) do |f| %>
     <% if tasks.errors.any? %>
       <div class="alert alert-warning">
         <h2><%= pluralize(tasks.errors.count, "error") %> prohibited this message from being saved:</h2>
@@ -12,7 +12,7 @@
         </ul>
       </div>
     <% end %>
-  
+    
     <div class="form-group">
       <%= f.label :status, 'ステータス' %>
       <%= f.text_field :status, class: 'form-control' %>
